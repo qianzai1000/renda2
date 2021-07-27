@@ -1,0 +1,273 @@
+/* pages/mine/mine.wxss */
+.contents{
+  width: 100%;
+  height: 100vh;
+  background: #eee;
+}
+.header{
+  width: 100%;
+  height: 310rpx;
+  background: #000;
+  border-bottom: none;
+}
+.info{
+  width: 90%;
+  height: 120rpx;
+  margin-left: 5%;
+  padding-top: 40rpx;
+  display: flex;
+  height: 140rpx;
+  z-index: 10;
+}
+.info-img{
+  width: 20%;
+  height: 100rpx;
+}
+.info-img image{
+  width: 120rpx;
+  height: 120rpx;
+  border: solid #eee 5rpx;
+  border-radius: 50%;
+}
+.info-text{
+  width: 71%;
+  color: #fff;
+  margin-left: 4%;
+  margin-top: 20rpx;
+}
+.info-name{
+  font-size: 32rpx;
+}
+.info-tel{
+  margin-top: 12rpx;
+  opacity: 0.5;
+  font-size: 28rpx;
+  font-family: PingFang SC Regular, PingFang SC Regular-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #ffffff;
+  line-height: 26px;
+}
+.info-denglu{
+  margin-top: 22rpx;
+}
+.info-name{
+  width: 400rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-break: break-all;
+  font-size: 32rpx;
+  font-family: PingFang SC Regular, PingFang SC Regular-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #ffffff;
+  line-height: 26px;
+}
+.info-icon image{
+  width: 12rpx;
+  height: 22rpx;
+  margin-top: 60rpx;
+}
+.member{
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 40rpx;
+  text-align: center;
+}
+.member-bg{
+  width: 100%;
+  height: 90rpx;
+}
+.member-text{
+  width: 100%;
+  position: relative;
+  display: flex;
+  color: #5D451D;
+}
+.member-title{
+  width: 46%;
+  text-align: left;
+  position: absolute;
+  top:-80rpx;
+  left: 4%;
+  font-size: 32rpx;
+  font-family: PingFang SC Semibold, PingFang SC Semibold-Semibold;
+  font-weight: 600;
+  text-align: left;
+  color: #5d451d;
+  line-height: 26px;
+}
+.member-span{
+  width: 46%;
+  text-align: right;
+  position: absolute;
+  top: -70rpx;
+  left: 49%;
+  font-size: 24rpx;
+  font-family: PingFang SC Regular, PingFang SC Regular-Regular;
+  font-weight: 400;
+  color: #5d451d;
+}
+.columns-titles{
+  width: 229px;
+  font-size: 28rpx;
+  font-family: PingFang SC Regular, PingFang SC Regular-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #5d451d;
+  line-height: 26px;
+  position: absolute;
+  top: -80rpx;
+  left:50%;
+  margin-left:-114.5rpx;
+}
+.columns{
+  margin-top: 20rpx;
+  background: #fff;
+  display: flex;
+  flex-wrap: wrap;
+}
+.columns-item{
+  width: 33.3%;
+  margin-top: 40rpx;
+  text-align: center;
+}
+.columns-item:nth-child(4),.columns-item:nth-child(5),.columns-item:nth-child(6){
+  padding-bottom: 60rpx;
+}
+.columns-img{
+  width: 80rpx;
+  height: 80rpx;
+  position: relative;
+  left: 50%;
+  margin-left: -40rpx;
+}
+.columns-img image{
+  width: 100%;
+  height: 100%;
+}
+.columns-title{
+  font-size: 24rpx;
+  color: #222;
+  margin-top: 12rpx;
+}
+
+.columns-list{
+  margin-top: 20rpx;
+  width: 100%;
+  height: 90rpx;
+  background: #fff;
+  display: flex;
+}
+.columns-list-img{
+  width: 10%;
+  margin-left:25rpx;
+  margin-top: 15rpx;
+}
+.columns-list-img image{
+  width: 60rpx;
+  height: 60rpx;
+}
+.columns-list-title{
+  width: 30%;
+  margin-left: 25rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 28rpx;
+  color: #222;
+}
+.columns-icon{
+  width: 60%;
+  height: 90rpx;
+  line-height: 90rpx;
+  margin-right: 25rpx;
+  display:flex;
+  flex-direction: row;
+}
+.columns-icon image{
+  text-align: right;
+  width: 12rpx;
+  height: 22rpx;
+  padding-top: 37rpx;
+}
+.icon-r{
+  text-align: right;
+}
+.columns-list-span{
+  flex: 1;
+  text-align: right;
+  font-size: 24rpx;
+  color:#c3c5cb;
+  margin-right: 10rpx;
+}
+
+/* 模态框 */
+
+.mask{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  z-index: 9000;
+  opacity: 0.7;
+}
+
+.modalDlg{
+  width: 552rpx;
+  height: 726rpx;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 9999;
+  margin: -370rpx 85rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.colse{
+  width: 64rpx;
+  height: 92rpx;
+  position: relative;
+  left: 40%;
+}
+.modal-bg{
+  width: 552rpx;
+  height: 634rpx;
+}
+.modal-btn{
+  width: 90%;
+  position: relative;
+}
+.modal-go{
+  position: absolute;
+  top: -150rpx;
+  height: 90rpx;
+  margin-left: 10%;
+  width: 81%
+}
+
+
+.modal-dialog {
+  width: 540rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 9999;
+  background: #f9f9f9;
+  margin: -180rpx 105rpx;
+  border-radius: 36rpx;
+}
+.modal-content1{
+  width: 300rpx;
+  height: 100rpx;
+  background: #FFF;
+  text-align: center;
+  padding: 30rpx;
+  position: fixed;
+  top: 35%;
+  border-radius: 6rpx;
+}

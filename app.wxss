@@ -1,0 +1,16 @@
+/**引入weUI **/
+@import "base/weui.wxss";
+/**app.wxss**/
+
+/*隐藏滚动条*/
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+scroll-view{
+	-webkit-overflow-scrolling:touch;
+}

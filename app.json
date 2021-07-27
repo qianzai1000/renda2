@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/classify/classify",
+    "pages/buycar/buycar",
+    "pages/mine/mine"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "仁大钢铁商城",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/static/img/md-home@1x.png",
+        "selectedIconPath": "/static/img/md-home@1x_select.png"
+      },
+      {
+        "pagePath": "pages/classify/classify",
+        "text": "分类",
+        "iconPath": "/static/img/antFill-tag@1x.png",
+        "selectedIconPath": "/static/img/antFill-tag@1x_select.png"
+      },
+      {
+        "pagePath": "pages/buycar/buycar",
+        "text": "购物车",
+        "iconPath": "/static/img/md-home@1x.png",
+        "selectedIconPath": "/static/img/md-home@1x_select.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "/static/img/md-home@1x.png",
+        "selectedIconPath": "/static/img/md-home@1x_select.png"
+      }
+    ]
+  },
+  "darkmode": false,
+  "debug": true,
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

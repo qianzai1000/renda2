@@ -1,0 +1,41 @@
+/* components/slider/slider.wxss */
+.slidersBox {
+  width: 100%;
+  height: 100rpx;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 32rpx;
+  position: relative;
+  overflow: hidden;
+}
+
+.operationBgBox {
+  height: 100rpx;
+  width: 100%;
+  background-color: #2F7DCD;
+  border-radius: 5px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  color: #fff;
+}
+
+.operationBox {
+  height: 100rpx;
+  width: 50px;
+  background-color:#EBEBEB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.operationBox image {
+  width: 50%;
+  height: 50%;
+}

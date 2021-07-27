@@ -1,0 +1,61 @@
+/* components/tarBar/tarBar.wxss */
+.tabbar {
+  position: fixed;
+  bottom: 30rpx;
+  left: 0;
+  right: 0;
+  height: 100rpx;
+  border-top: 0.3rpx solid #D9D9D9 ;
+
+  display: flex;
+  font-size: 0;
+  background: #fff;
+}
+.tabbar-item {
+  flex: 1;
+  text-align: center;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 8rpx 10rpx 0;
+  color: #333333;
+}
+.tabbar-item-icon image {
+  width: 70rpx;
+  height: 90rpx;
+}
+.tabbar-item:nth-child(3){
+  position: relative;
+  bottom: 48rpx;
+  height:150rpx;
+  flex: 0.8;
+}
+
+.tabbar-item:nth-child(3) .tabbar-item-icon{
+  height: 100rpx;
+  /* background: #fff; */
+  border-radius: 50%;
+  /* border-top: solid 0.1rpx #D9D9D9; */
+}
+
+.tabbar-item:nth-child(3) .tabbar-item-icon image{
+  width: 90rpx !important;
+  height: 123rpx !important;
+  padding-top: 14rpx;
+}
+.tabbar-item:nth-child(3) .tabbar-item-text{
+  line-height: 0;
+  font-size: 28rpx;
+  margin-top: 9px;
+}
+.tabbar-item-icon {
+  margin-bottom: 6rpx;
+  height: 80rpx;
+}
+.tabbar-item-text {
+  font-size: 28rpx;
+  line-height: 20rpx;
+  color: #808080;
+}
+.active {
+  color: #23ac38;
+}

@@ -1,0 +1,134 @@
+<view class="contents">
+  <!-- 头部 -->
+  <view class="header">
+    <!-- 个人信息  -->
+    <!-- <navigator url="../personal/personal?title=个人信息"> -->
+      <view class="info" bindtap="onlogin">
+          <view class="info-img">
+            <image src="{{memberInfor.headimgurl?memberInfor.headimgurl:'../../images/infoT.png'}}"></image>
+          </view>
+          <view class="info-text" hidden="{{loginNo}}" >
+            <view class="info-denglu">登录/注册</view>
+          </view>
+          <view class="info-text" hidden="{{!loginNo}}">
+            <view class="info-name">{{memberInfor.nickname}}</view>
+            <view class="info-tel">{{memberInfor.mobile}}</view>
+          </view>
+          <view class="info-icon">
+            <image src="../../images/rr.png"></image>
+          </view>
+      </view>
+    <!-- </navigator> -->
+    <!-- 用户等级 -->
+    <view class="member">
+      <image src="../../images/hui.png" class="member-bg"></image>
+      <view class="member-text" bindtap="lingTap" data-value="0">
+        <view class="member-title">{{memberInfor.levelname}}</view>
+        <view wx:if="{{loginNo}}"  class="member-span">我的会员卡</view>
+        <view wx:else class="columns-titles">登录领取会员权益</view>
+      </view>
+    </view>
+  </view>
+  <!-- 分栏 -->
+  <view class="columns">
+    <view class="columns-item" bindtap="lingTap" data-value="1">
+      <view class="columns-img">
+        <image src="../../images/qian.png"></image>
+      </view>
+      <view class="columns-title">签到领积分</view>
+    </view>
+    <view class="columns-item" bindtap="lingTap" data-value="2">
+      <view class="columns-img">
+        <image src="../../images/cheng.png"></image>
+      </view>
+      <view class="columns-title">会员成长</view>
+      
+    </view>
+    <view class="columns-item" bindtap="lingTap" data-value="3">
+      <view class="columns-img">
+        <image src="../../images/lin.png"></image>
+      </view>
+      <view class="columns-title">领券中心</view>
+    </view> 
+    <view class="columns-item" bindtap="lingTap" data-value="4">
+      <view class="columns-img">
+        <image src="../../images/ji.png"></image>
+      </view>
+      <view class="columns-title">积分商城</view>
+    </view>
+    <view class="columns-item" bindtap="lingTap" data-value="5">
+      <view class="columns-img">
+        <image src="../../images/li.png"></image>
+      </view>
+      <view class="columns-title">会员礼品</view>
+    </view>
+    <view class="columns-item" bindtap="lingTap" data-value="6">
+      <view class="columns-img">
+        <image src="../../images/di.png"></image>
+      </view>
+      <view class="columns-title">收货地址</view>
+    </view>
+  </view>
+  <!-- 分栏 -->
+  <view class="columns-list">
+    <view class="columns-list-img">
+      <image  src="../../images/tou.png"></image>
+      <!-- <image wx:else wx:if="{{loginNo}}" src="../../images/tou1.png"></image> -->
+    </view>
+    <view class="columns-list-title">我的机顶盒</view>
+    <view class="columns-icon" bindtap="scanCode">
+      <view class="columns-list-span" data-value="{{number}}">{{equipmentInfor.tvSn}}</view>
+      <image src="../../images/rr.png"></image>
+    </view>
+  </view>
+  <!-- <view class="columns-list" bindtap="lingTap">
+    <view class="columns-list-img">
+      <image src="../../images/yi.png" ></image>
+    </view>
+    <view class="columns-list-title">意见反馈</view>
+    <view class="columns-icon">
+    <view class="columns-list-span"></view>
+      <image src="../../images/r1.png" class="icon-r"></image>
+    </view>
+  </view> -->
+<view class="columns-list" bindtap="sao">
+    <view class="columns-list-img">
+      <image src="../../images/sao1.png" ></image>
+    </view>
+    <view class="columns-list-title">扫一扫</view>
+    <view class="columns-icon">
+    <view class="columns-list-span"></view>
+      <image src="../../images/rr.png" class="icon-r"></image>
+    </view>
+  </view>
+  <view class="columns-list" bindtap="noLogin">
+    <view class="columns-list-img">
+      <image  src="../../images/she.png"></image>
+      <!-- <image wx:if="{{loginNo}}" wx:else src="../../images/she1.png"></image> -->
+    </view>
+    <view class="columns-list-title">设置</view>
+    <view class="columns-icon">
+    <view class="columns-list-span"></view>
+      <image src="../../images/rr.png" class="icon-r"></image>
+    </view>
+  </view>
+
+  <!-- 底部导航栏 -->
+  <component-Footer class="footer" activeIdx="{{activeIdx}}" title="我的"></component-Footer>
+</view>
+
+
+<!-- 领券中心的弹出框 -->
+<!-- <view class="mask" bindtap="maskClose" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modalDlg" wx:if="{{showModal}}">
+    <image bindtap="colse" class="colse" src="../../images/ling-close.png"></image>
+    <image class="modal-bg" src="../../images/ling-modal.png"/>
+    <navigator url="../prize/prize?title=领取奖品" class="modal-btn" >
+      <view class="modal-go"></view>
+    </navigator>
+</view> -->
+<!-- 未开放的弹出框 -->
+<view class="mask" bindtap="maskClose1" catchtouchmove="preventTouchMove" wx:if="{{showModal1}}"></view>
+<view class="modalDlg" bindtap="maskClose1" wx:if="{{showModal1}}">
+     <view class='modal-content1'>暂未开放此功能，敬请期待</view>
+</view>

@@ -1,0 +1,22 @@
+<!-- 组件模板 横向轮播图-->
+<view class="template-contents swiper-contentes" >
+<swiper class="swiper" autoplay='true' interval="3000" duration="1000"  bindchange="swiperChange" circular="true">
+      <block wx:for="{{dataList}}" wx:key="item">
+          <swiper-item >
+            <view>
+              <image src="{{'../../images/index@1x.png'}}" class='swiper-img'></image>
+              <!-- <image wx:else class='swiper-img'></image> -->
+              <view class="swiper-title">
+                <view class="swiper-title-t">{{"图片"}}</view>
+              </view>
+            </view>
+          </swiper-item>
+      </block>
+    </swiper>
+    <!-- 指示点的样式 -->
+    <view class="dots">
+      <block wx:for="{{dataList}}" wx:key="imgs">
+        <view class="dot {{index == currentSwiper ? ' active' : ''}}"></view>
+      </block>
+    </view>
+</view>

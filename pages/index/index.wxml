@@ -1,0 +1,9 @@
+<view>
+ <!-- style="top:{{statusBarHeight + titleHeight + titleMarginTop + 10}}px;" -->
+  <view class="collection-tips-box" wx:if="{{isShowCollectionTipsDialog}}" bindtap="hideCollectionTips" style="top:{{10}}px;">
+    <image class="collection-tips-icon" src="/static/img/collection-tips.png"></image>
+    <view class="text">放入我的小程序，方便下次使用</view>
+    <image class="collection-tips---close" src="/static/img/close.png"></image>
+  </view>
+  <template-swiper></template-swiper>
+</view>

@@ -1,0 +1,74 @@
+// 小程序wxml模板不支持复杂的运算，复杂的parseInt()、str.split()、num.toFixed()等在{{}}里是无效的
+
+// 截取数组
+var slice = function (val, start, stop) {
+    if (val) {
+        return val.slice(start, stop)
+    } else {
+        return ''
+    }
+};
+
+// 截取字符串
+var subStr = function (val, start, end) {
+    if (val.length == 0 || val == undefined) {
+        return;
+    }
+    return val.substring(start, end);
+};
+
+// 判断是预约，还是已预约
+var subscriber = function (code, arr) {
+    var isSubscriber = "";
+    arr.forEach(function (item, index) {
+        if (code == item.content.code) {
+            isSubscriber = true;
+        } else {
+            isSubscriber = false;
+        }
+    });
+    return isSubscriber;
+};
+
+// 详情页 演员、类型字段处理
+var actorOne = function (item) {
+    return item.split("|").join("/");
+};
+
+// 详情页 演员、类型字段处理
+var actorTwo = function (item1, item2) {
+    item1 = item1.split("|").join("/");
+    item2 = item2.split("|").join("/");
+
+    return item1 + "/" + item2;
+};
+
+// 字符串字数超过15个省略
+var textOverFlow = function (str) {
+    if (str.length > 15) {
+        return str.substring(0, 15) + "..."
+    } else {
+        return str
+    }
+};
+
+// 去除[avs2]
+var removeStr = function (str) {
+    if (str == null || str == "") return;
+
+    if (str.indexOf("[avs2]") == -1) {
+        return str;
+    } else {
+        return str.split("[avs2]")[1];
+    }
+}
+
+module.exports = {
+    slice: slice,
+    subStr: subStr,
+    subscriber: subscriber,
+    actorOne: actorOne,
+    actorTwo: actorTwo,
+    textOverFlow: textOverFlow,
+    removeStr: removeStr
+};

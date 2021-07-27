@@ -1,0 +1,50 @@
+.collection-tips-box {
+  position: absolute;
+  right: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 36px;
+  font-size: 14px;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid #505c59;
+  background: rgb(190, 196, 195);
+  z-index: 999;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
+}
+
+.collection-tips-box:after, .collection-tips-box:before {
+  border: solid transparent;
+  content: ' ';
+  height: 0;
+  bottom: 100%;
+  position: absolute;
+  width: 0;
+}
+
+.collection-tips-box:after {
+  border-width: 7px;
+  border-bottom-color: rgba(26, 45, 39, 1);
+  left: 212px;
+}
+
+.collection-tips-box:before {
+  border-width: 9px;
+  border-bottom-color: #505c59;
+  left: 210px;
+}
+
+.collection-tips-icon {
+  margin-left: 14px;
+  margin-right: 3px;
+  width: 16px;
+  height: 16px;
+}
+
+.collection-tips---close {
+  margin-left: 18px;
+  margin-right: 9px;
+  width: 13px;
+  height: 13px;
+}
