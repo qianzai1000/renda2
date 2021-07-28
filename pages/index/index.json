@@ -2,6 +2,5 @@
   "navigationBarTitleText": "首页",
   "usingComponents": {
     "template-swiper": "../../components/templateSwiper/templateSwiper"
-  },
-  "disableScroll": true
+  }
 }

@@ -1,9 +1,64 @@
-<view>
- <!-- style="top:{{statusBarHeight + titleHeight + titleMarginTop + 10}}px;" -->
-  <view class="collection-tips-box" wx:if="{{isShowCollectionTipsDialog}}" bindtap="hideCollectionTips" style="top:{{10}}px;">
+<view class="contain">
+  <view class="collection-tips-box" wx:if="{{isShowCollectionTipsDialog}}" bindtap="hideCollectionTips"
+    style="top:{{10}}px;">
+    <!-- style="top:{{statusBarHeight + titleHeight + titleMarginTop + 10}}px;" -->
     <image class="collection-tips-icon" src="/static/img/collection-tips.png"></image>
     <view class="text">放入我的小程序，方便下次使用</view>
     <image class="collection-tips---close" src="/static/img/close.png"></image>
   </view>
-  <template-swiper></template-swiper>
+  <view class="slideshow">
+    <template-swiper></template-swiper>
+  </view>
+  <view class="search-contents">
+    <view class="search-inputes" bindtap="onSearchSkip">
+      <input placeholder-class="phcolor" class="input-textes" placeholder="请输入查找内容" disabled></input>
+      <image class="search-img" src="../../images/search.png"></image>
+    </view>
+  </view>
+  <view class="commodity-content">
+    <view class="commodity-content-new">
+      <view class="commodity-content-new-text">
+        <view class="commodity-content-new-lefttext">新品上市</view>
+        <view class="commodity-content-new-righttext">查看全部 ></view>
+      </view>
+      <view class="commodity-content-new-list">
+        <block wx:for="{{[1,2,3]}}" wx:key="item">
+          <view class="commodity-content-new-list-item">
+            <image src="{{'../../images/gangcai1.png'}}" class='commodity-content-new-list-item-img'></image>
+            <view>
+              最新钢材最新钢材
+            </view>
+            <view>
+              七天无理由退换
+            </view>
+          </view>
+        </block>
+        <view class="commodity-content-new-list-exchange" bindtap="getNext">
+          <image class="commodity-content-new-list-exchange-icon" src="../../images/huan.png">
+          </image>
+          <view class="commodity-content-new-list-exchange-text">换一批</view>
+        </view>
+      </view>
+
+    </view>
+    <view class="commodity-content-limit">
+      <view class="commodity-content-limit-text">
+        <view class="commodity-content-limit-lefttext">限时秒杀</view>
+        <view class="commodity-content-limit-righttext">查看全部 ></view>
+      </view>
+      <view class="commodity-content-limit-list">
+        <block wx:for="{{[1,2,3]}}" wx:key="item">
+          <view class="commodity-content-limit-list-item">
+            <image src="{{'../../images/gangcai1.png'}}" class='commodity-content-limit-list-item-img'></image>
+            <view>
+              最新钢材最新钢材
+            </view>
+            <view>
+              七天无理由退换
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
 </view>
