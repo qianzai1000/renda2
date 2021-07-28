@@ -18,7 +18,7 @@
   <view class="commodity-content">
     <view class="commodity-content-new">
       <view class="commodity-content-new-text">
-        <view class="commodity-content-new-lefttext">新品上市</view>
+        <view class="commodity-content-new-lefttext">新品上市342</view>
         <view class="commodity-content-new-righttext">查看全部 ></view>
       </view>
       <view class="commodity-content-new-list">
