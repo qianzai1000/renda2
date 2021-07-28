@@ -105,7 +105,6 @@
 .commodity-content{
   width: 90%;
   margin-left: 5%;
-  height: 8000rpx;
   margin-top: 20rpx;
   border-radius: 16rpx;
   background-color: rgba(245, 245, 245, 100);
